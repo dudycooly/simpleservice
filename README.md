@@ -2,7 +2,7 @@
 
 A simple and configurable service that can, for example, be used for testing container orchestration setups (incl. health check endpoint).
 
-Note that the versions of `simpleservice`, such as `0.1.0`, used in the following refer to the tags used in the respective [Docker images](https://hub.docker.com/r/dudycooly/simpleservice/tags/) created. There are no tags or releases as such in this GitHub repo.
+Note that the versions of `simpleservice`, such as `0.1.0`, used in the following refer to the tags used in the respective [Docker images](https://hub.docker.com/r/docker4jp/simpleservice/tags/) created. There are no tags or releases as such in this GitHub repo.
 
 Contents:
 
@@ -22,13 +22,13 @@ Principled response:
     HTTP/1.1 200 OK
     $HEADER_FIELDS
      {
-         "env": "$DUMP_OF_ENVIRONMENT_VARS",
+         "env": "$ENVIRONMENT_VARS",
          "version": "$VERSION"
      }
 
 Example response:
 
-    HTTP/1.1 200 OK                                                                                                                                                             [5/99]
+    HTTP/1.1 200 OK
     Content-Length: 2471
     Content-Type: application/json
     Date: Sun, 27 Oct 2019 12:38:47 GMT
@@ -120,7 +120,7 @@ Example response:
 
 ## Running it
 
-For local execution, Python `2.7.9` is required. You can then run `simpleservice` like so:
+For local execution, Python `3.7+` is required. You can then run `simpleservice` like so:
 
     # with defaults:
     $ python simpleservice.py
@@ -132,7 +132,7 @@ If you fancy it you can run the containerized version of `simpleservice` on your
 
     $ docker run -P dudycooly/simpleservice:0.1.0
 
-See also the [container images](https://hub.docker.com/r/dudycooly/simpleservice/tags/).
+See also the [container images](https://hub.docker.com/r/docker4jp/simpleservice/tags/).
 
 
 ## Changing runtime behaviour
