@@ -1,4 +1,4 @@
-FROM python:2.7-onbuild
-MAINTAINER Michael Hausenblas
-ENV REFRESHED_AT 2017-04-24T13:50
+FROM python:3.7-buster
+MAINTAINER Jayaprakash Subramanian
+ENV CONFIG_MODE prod
 CMD [ "python", "./simpleservice.py" ]

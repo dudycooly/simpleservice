@@ -3,8 +3,9 @@
 """
 A simple service
 
-@author: Michael Hausenblas, http://mhausenblas.info/#i
-@since: 2016-09-23
+Based on version from Michael Hausenblas, http://mhausenblas.info/#i
+@author: Jayaprakash Subranmanian
+@since: 2019-10-27
 """
 
 import logging
@@ -66,7 +67,7 @@ class Endpoint0(tornado.web.RequestHandler):
         }
       ))
       self.finish()
-    except Exception, e:
+    except Exception as e:
       logging.debug(e)
       self.set_status(404)
 
@@ -88,7 +89,7 @@ class Health(tornado.web.RequestHandler):
         delay_response = random.randrange(float(HEALTH_MIN), float(HEALTH_MAX))
         time.sleep(delay_response/1000.0)
       self.finish()
-    except Exception, e:
+    except Exception as e:
       logging.debug(e)
       self.set_status(404)
 
@@ -108,7 +109,7 @@ class Info(tornado.web.RequestHandler):
         }
       ))
       self.finish()
-    except Exception, e:
+    except Exception as e:
       logging.debug(e)
       self.set_status(404)
 
@@ -127,7 +128,7 @@ class Environment(tornado.web.RequestHandler):
         }
       ))
       self.finish()
-    except Exception, e:
+    except Exception as e:
       logging.debug(e)
       self.set_status(404)
 
