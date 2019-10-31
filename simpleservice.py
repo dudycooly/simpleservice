@@ -10,7 +10,6 @@ Based on version from Michael Hausenblas, http://mhausenblas.info/#i
 
 import logging
 import os
-import json
 import tornado.ioloop
 import tornado.web
 import random
@@ -124,7 +123,7 @@ class Environment(tornado.web.RequestHandler):
       self.write(json_encode(
         {
           "version" : VERSION,
-          "env" : str(os.environ),
+          "env" : dict(os.environ),
         }
       ))
       self.finish()
