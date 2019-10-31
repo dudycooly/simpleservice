@@ -1,5 +1,7 @@
 # A Simple Service
 
+Based on : [mhausenblas/simpleservice](https://github.com/mhausenblas/simpleservice)
+
 A simple and configurable service that can, for example, be used for testing container orchestration setups (incl. health check endpoint).
 
 Note that the versions of `simpleservice`, such as `0.1.0`, used in the following refer to the tags used in the respective [Docker images](https://hub.docker.com/r/docker4jp/simpleservice/tags/) created. There are no tags or releases as such in this GitHub repo.
