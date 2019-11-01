@@ -167,5 +167,5 @@ if __name__ == "__main__":
         (r"/env", Environment)
     ])
     app.listen(PORT, address='0.0.0.0')
-    logging.info("This is simple service in version v%s listening on port %s", VERSION, PORT)
+    logging.info("Simple Service (v%s) listening on port %s", VERSION, PORT)
     tornado.ioloop.IOLoop.current().start()
