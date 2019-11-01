@@ -11,5 +11,4 @@ RUN pip install -r requirements.txt
 
 COPY simpleservice.py .
 
-LABEL version="0.1.1"
 CMD [ "python", "./simpleservice.py" ]
